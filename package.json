@@ -4,6 +4,7 @@
   "description": "",
   "main": "workday.js",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "nightmare": "^3.0.1",
     "nodemailer": "^4.6.8",
     "puppeteer": "^1.7.0"
