@@ -20,7 +20,7 @@ const transporter = nodemailer.createTransport({
     }
     try {
     const browser = await puppeteer.launch({
-        headless:true,
+        headless:false,
     });
     const page = await browser.newPage();
     await page.setViewport({
@@ -29,8 +29,8 @@ const transporter = nodemailer.createTransport({
     });
     await page.goto('https://workday.fau.edu');
     await page.waitForSelector('form[name="login-form"]');
-    await page.type('input[id="username"]', process.env.USER);
-    await page.type('input[id="password"]', process.env.PASSWORD);
+    await page.type('input[id="username"]', process.env.WD_USER);
+    await page.type('input[id="password"]', process.env.WD_PASSWORD);
     await page.click('button[name="_eventId_proceed"]');
     await page.waitForSelector('iframe[id="duo_iframe"]');
     const frame = page.mainFrame().childFrames()[0];
