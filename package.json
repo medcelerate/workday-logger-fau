@@ -1,0 +1,17 @@
+{
+  "name": "workday",
+  "version": "1.0.0",
+  "description": "",
+  "main": "workday.js",
+  "dependencies": {
+    "nightmare": "^3.0.1",
+    "nodemailer": "^4.6.8",
+    "puppeteer": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
