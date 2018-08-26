@@ -73,10 +73,17 @@ const transporter = nodemailer.createTransport({
         await page.keyboard.press('Enter');
         await page.waitFor(6000)
 //New stuff
-        const inputsel = await page.$$('input[class="gwt-TextBox WNP1 WEQ1"')
+        const inputsel = await page.$$('div[data-automation-id="standaloneTimeWidget"] > input')
         await inputsel[0].type('9:00')
         await inputsel[1].type('2:00')
-
+        await page.waitFor(2000)
+        //const lsel = await page.$$('div[data-automation-id="selectWidget"]')
+        //await lsel[1].click()
+        //await page.waitFor(2000)
+        //const lvsel = await page.$$('div[aria-posinset="1"]')
+        //await page.click('div[aria-posinset="2"]')
+        //await lvsel[1].click()
+       // await page.waitFor(2000)
         await page.click('button[title="OK"]')
        // await page.click('button[class="WFWM WBCO WEWM WDJN WDVM WJWM"]')
         await page.waitFor(3000)
