@@ -1,5 +1,7 @@
 # workday-logger-fau
 
+# A recent change may make this not work for you, if this is the case, please submit an issue here and I will post a fix. 
+
 To use this create a .env file in the directory with the following variables.
 ```
 WD_USER='your FAU NETID'
